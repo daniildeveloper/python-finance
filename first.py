@@ -10,4 +10,6 @@ start = dt.datetime(2000,1,1)
 end = dt.datetime(2017,5,1)
 
 df = web.DataReader("IBM","yahoo", start, end)
-print(df.tail())
+df[["Open", "High"]].plot()
+plt.show()
+
